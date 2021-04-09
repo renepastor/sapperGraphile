@@ -1,0 +1,34 @@
+// Define variables to override default ones
+//$primary-color: rgb(255,62,0);
+$primary: #c8c6a7;
+//$danger: #ff4136;
+$secondary: #92967d;
+$tres:#6e7c7c;
+$cuatro:#435560;
+//6e7c7c, 435560
+// $secondary-color: rgb(105, 6, 6);
+//$error-color: #c02020;
+$font-size: 0.9rem;
+$font-size-sm: .8rem;
+$font-size-lg: 1rem;
+
+// Import full Spectre source code
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+.w-100{width: 100%;}
+.flex-centered {padding-top: 0rem;}
+.list{border:1px solid #ccc;box-shadow: 1px 1px 3px #666;}
+.columns{border-bottom: 1px solid #ccc;}
+.modal-container{padding:0px !important;box-shadow: 1px 1px 3px #666;}
+.modal-header, .modal-footer{background: $secondary;}
+.sombra2 {box-shadow: 2px 2px 10px #666;}
+.modal:target .modal-overlay, .modal.active .modal-overlay {background: rgba(73, 73, 73, 0.75);}
+.active{border-bottom: 2px solid #ccc;}
+.offcanvas-start{max-width: 320px !important;}
+.accordion svg{width: 32px; height: 32px; margin: 0 2px; border-radius: 50%; border: 1px solid; padding: 4px; color: #ff0000;}
+.bg-tres{
+    background-color: $tres;
+}
+.bg-cuatro{
+    background-color: $blue-900 !important;
+    color:#fff;
+}
