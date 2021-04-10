@@ -1,6 +1,6 @@
 {
-  "name": "sapper-graphile",
-  "description": "Sapper autenticacion JWT desde PostGraphile",
+  "name": "sapper",
+  "description": "Sapper authentication example",
   "version": "0.9.1",
   "scripts": {
     "dev": "sapper dev",

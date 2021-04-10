@@ -1,13 +1,13 @@
 <script>
-  import { goto } from "@sapper/app";
-  import { user } from "./_store.js";
+  import { user, URL_GRAPH } from "./_store.js";
+
 
   let username = "";
   let password = "";
 
   async function submit() {
     try {
-      const resul = await fetch('http://localhost:8004/graphql', {
+      const resul = await fetch(URL_GRAPH, {
             method: 'POST',
             headers: {
             'Accept': `application/json`,

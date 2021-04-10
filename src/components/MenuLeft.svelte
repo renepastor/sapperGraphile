@@ -1,6 +1,6 @@
 <script>
     import { goto } from "@sapper/app";
-    import { user } from "./../routes/_store.js";
+    import { user,URL_GRAPH } from "./../routes/_store.js";
     import { GearFill, PersonCheckFill, PeopleFill } from "svelte-bootstrap-icons";
     import { onMount } from "svelte";
 
@@ -13,7 +13,7 @@
     async function fetchData() {
         try {
             loading = true;
-            const res = await fetch("http://localhost:8004/graphql", {
+            const res = await fetch(URL_GRAPH, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
@@ -49,12 +49,12 @@
                 {#if process.browser}
                     {#await fetchData() then data}
                         {#each data.filter(item=>(item.nivel==1)) as item}
-                            <h2 class="accordion-header" id="flush{item.id}">
+                            <h2 class="accordion-header" id="flush{item.id}head">
                                 <button class="accordion-button collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#flush{item.id}" aria-expanded="false" aria-controls="flush{item.id}">
                                     <GearFill /> {item.nombre}
                                 </button>
                             </h2>
-                            <div id="flush{item.id}" class="accordion-collapse collapse" aria-labelledby="flush{item.id}" data-bs-parent="#accordionFlushExample">
+                            <div id="flush{item.id}" class="accordion-collapse collapse" aria-labelledby="flush{item.id}head" data-bs-parent="#accordionFlushExample">
                                 <div id="list-example" class="list-group">
                                     {#each data.filter(it=>(it.padreId==item.id)) as itemNivel}
                                         <a class="list-group-item list-group-item-action" href="{itemNivel.ruta}">{itemNivel.nombre}</a>

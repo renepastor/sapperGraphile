@@ -6,6 +6,7 @@
   import Nav from "../components/Nav.svelte";
   import MenuLeft from "../components/MenuLeft.svelte";
   export let segment;
+  
 </script>
 
 <Nav {segment} />

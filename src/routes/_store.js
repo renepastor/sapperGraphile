@@ -1,5 +1,7 @@
 import { writable } from "svelte/store";
 
+export const URL_GRAPH = "http://localhost:8004/graphql";
+
 function useLocalStorage(store) {
   const json = localStorage.getItem("user");
   if (json && json !== "undefined") {

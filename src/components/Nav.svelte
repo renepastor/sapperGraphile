@@ -2,7 +2,7 @@
   import { goto } from "@sapper/app";
   import { user } from "./../routes/_store.js";
   export let segment;
-
+  
 
   async function logout() {
     try {
