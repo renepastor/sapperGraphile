@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
-    "sirv": "^1.0.0",
+    "sirv": "^3.0.2",
     "spectre.css": "^0.5.9"
   },
   "devDependencies": {
